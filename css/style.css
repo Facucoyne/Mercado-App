@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #1b1b1b;
+  }
+  
+  .navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    color: #fac564;
+    margin-top: 4vh;
+    cursor: pointer;
+  }
+  
+  .ver-carrito {
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+  }
+  
+.banner{
+    padding: 0px 110px;
+    background-image:linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)), url(./../img/nrd-D6Tu_L3chLE-unsplash.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+
+.contenido-banner{
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    padding: 25%;
+}
+
+.texto span{
+    font-size: 19px;
+}
+
+h3 ,p {
+    color: #111;
+    font-size: 19px;
+    padding: 15px;
+}
+
+
+    /*product cards*/
+    .shop-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        margin: 10px;
+    }
+    
+    .card > img {
+        width: 90%;
+        height: 250px;
+        /* aspect-ratio: 1.5;*/
+    }
+    
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+    
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .card button:hover {
+        opacity: 0.7;
+    }
+    
+
+ 
+/*modal content*/
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for the top*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+  }
+  
+  .modal-container::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .modal-header-title {
+    justify-self: start;
+  }
+  
+  .modal-header-button {
+    cursor: pointer;
+  }
+  
+  .modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+  }
+  
+  .modal-container > div > img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  /*Logo de cantidad en carrito*/
+  .cantidad-carrito{
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 35px;
+    right: 14px;
+    position: absolute;
+    display: none;
+  }
+  /*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
+  
+  @media only screen and (max-width: 750px) {
+    .modal-container {
+      width: 100%;
+      margin: 0;
+      min-height: 88vh;
+    }
+  
+    .modal-container > .modal-content {
+      justify-content: space-between;
+      width: 100%;
+      margin: 2px;
+    }
+  
+    .modal-container > div > img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  
+  /*delete button product*/
+  .delete-product {
+    cursor: pointer;
+  }
+  
+  /*CarritoCounter*/
+  .cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+  }
+  h3 , p {
+    color: rgb(107, 106, 106);
+  }
+  .sumar {
+    cursor: pointer;
+  }
+  
+  .restar {
+    cursor: pointer;
+  }
